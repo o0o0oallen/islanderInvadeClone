@@ -5430,7 +5430,7 @@ System.register("chunks:///Core/AdUitls/AdManager.js", ["../../_virtual/_rollupP
                     }, {
                         key: "createInterstitialAd",
                         value: function () {
-                            if (window.MinigameAds) {
+                            /*if (window.MinigameAds) {
                                 var e = window.MiniGameAds.isInterstitialReady();
                                 console.log("H5新接口插屏广告开关，是否可以展示广告", e),
                                     e ? window.MiniGameAds.showInterstitial().then((function () {
@@ -5440,12 +5440,12 @@ System.register("chunks:///Core/AdUitls/AdManager.js", ["../../_virtual/_rollupP
                                         console.error("H5新接口播放插屏广告: 失败，原因: " + e.message)
                                     }
                                     )) : console.info("H5插屏广告没有加载成功，无法播放")
-                            }
+                            }*/
                         }
                     }, {
                         key: "_createInterstitialAd",
                         value: function (e) {
-                            if ("undefined" != typeof qg && void 0 !== qg.getSystemInfoSync) {
+                            /*if ("undefined" != typeof qg && void 0 !== qg.getSystemInfoSync) {
                                 var n, o = qg.getSystemInfoSync();
                                 "vivo" == o.brand ? n = qg.createInterstitialAd({
                                     posId: e
@@ -5464,12 +5464,12 @@ System.register("chunks:///Core/AdUitls/AdManager.js", ["../../_virtual/_rollupP
                                     }
                                     )),
                                     n.show()
-                            }
+                            }*/
                         }
                     }, {
                         key: "createTTInterstitialAd",
                         value: function () {
-                            var n = tt.createInterstitialAd({
+                            /*var n = tt.createInterstitialAd({
                                 adUnitId: e.ttInterstitialId
                             });
                             n.load().then((function () {
@@ -5478,18 +5478,18 @@ System.register("chunks:///Core/AdUitls/AdManager.js", ["../../_virtual/_rollupP
                             )).catch((function (e) {
                                 console.log(e)
                             }
-                            ))
+                            ))*/
                         }
                     }, {
                         key: "createNativeAd",
                         value: function (e) {
-                            this.nativeCallBack = e,
-                                s.isOppo() ? this.createOppoNativeAd(e) : s.isVivo() && this.createVivoNativeAd(e)
+                            /*this.nativeCallBack = e,
+                                s.isOppo() ? this.createOppoNativeAd(e) : s.isVivo() && this.createVivoNativeAd(e)*/
                         }
                     }, {
                         key: "createVivoNativeAd",
                         value: function (n) {
-                            null == e.nativeAd && (console.log("--------------- createVivoNativeAd -----------------"),
+                            /*null == e.nativeAd && (console.log("--------------- createVivoNativeAd -----------------"),
                                 e.nativeAd = qg.createNativeAd({
                                     posId: e.vivoNativeAdId
                                 }),
@@ -5506,12 +5506,12 @@ System.register("chunks:///Core/AdUitls/AdManager.js", ["../../_virtual/_rollupP
                                 }
                                 ))),
                                 console.log("加载原生广告"),
-                                this.nativeAd.load()
+                                this.nativeAd.load()*/
                         }
                     }, {
                         key: "createVivoMiniNativeAd",
                         value: function (n) {
-                            null == e.minNativeAd && (console.log("--------------- createVivoMiniNativeAd -----------------"),
+                            /*null == e.minNativeAd && (console.log("--------------- createVivoMiniNativeAd -----------------"),
                                 e.minNativeAd = qg.createNativeAd({
                                     posId: e.vivoMiniNativeAdId
                                 }),
@@ -5529,12 +5529,12 @@ System.register("chunks:///Core/AdUitls/AdManager.js", ["../../_virtual/_rollupP
                                 }
                                 ))),
                                 console.log("加载原生小广告"),
-                                this.minNativeAd.load()
+                                this.minNativeAd.load()*/
                         }
                     }, {
                         key: "createOppoNativeAd",
                         value: function (n) {
-                            console.log("----------- createOppoNativeAd ---------------"),
+                            /*console.log("----------- createOppoNativeAd ---------------"),
                                 null == e.nativeAd && (e.nativeAd = qg.createNativeAd({
                                     adUnitId: e.oppoNativeAdId
                                 }),
@@ -5550,19 +5550,19 @@ System.register("chunks:///Core/AdUitls/AdManager.js", ["../../_virtual/_rollupP
                                         console.log("原生广告加载异常", JSON.stringify(e))
                                     }
                                     ))),
-                                e.nativeAd.load()
+                                e.nativeAd.load()*/
                         }
                     }, {
                         key: "clickNativeAd",
                         value: function () {
-                            e.nativeAd && e.nativeAd.reportAdClick({
+                            /*e.nativeAd && e.nativeAd.reportAdClick({
                                 adId: e.nativeAdObj.adId
-                            })
+                            })*/
                         }
                     }, {
                         key: "createMiniOppoNativeAd",
                         value: function (n) {
-                            console.log("----------- createMinOppoNativeAd ---------------"),
+                            /*console.log("----------- createMinOppoNativeAd ---------------"),
                                 null == e.minNativeAd && (e.minNativeAd = qg.createNativeAd({
                                     adUnitId: e.oppoMiniNativeAdId
                                 }),
@@ -5577,7 +5577,7 @@ System.register("chunks:///Core/AdUitls/AdManager.js", ["../../_virtual/_rollupP
                                         console.log("原生小广告加载异常", JSON.stringify(e))
                                     }
                                     ))),
-                                e.minNativeAd.load()
+                                e.minNativeAd.load()*/
                         }
                     }, {
                         key: "clickMiniNativeAd",
